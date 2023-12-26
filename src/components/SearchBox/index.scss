@@ -1,0 +1,15 @@
+$background-color: #ffffff;
+$border-color: #989595;
+$font-color: #757575;
+
+.searchBox{
+    background: $background-color;
+    color: $font-color;
+    border: 1px solid ;
+    width: 35vw; 
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20vh;
+}

@@ -6,6 +6,16 @@
 }
 
 
+@mixin wishlistButton{
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    color: #bbbbbb;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
 .productCard{
     display: flex;
     flex-direction: column;
@@ -13,6 +23,21 @@
     height: 100%;
     flex-wrap: wrap;
     margin: 10px;
+
+    .imageContainer{
+        position: relative;
+        display: inline-block;
+
+        .wishlistButton{
+            @include wishlistButton()
+          }
+
+          .filled{
+            @include wishlistButton();
+            color: red;
+          }
+
+    }
 
     .productImage{
         width: 100%;

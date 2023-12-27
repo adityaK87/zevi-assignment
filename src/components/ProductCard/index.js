@@ -14,7 +14,7 @@ const ProductCard = () => {
 					alt="Product Name"
 					className="productImage"
 				/>
-
+				<button className="viewProductButton">View Product</button>
 				{/* Add to wishlist  */}
 				{isAddedToWishlist ? (
 					<span

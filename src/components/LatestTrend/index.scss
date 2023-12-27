@@ -1,0 +1,42 @@
+.latestTrendContainer{   
+    width: 70%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 9px rgba(0,0,0, 0.6);
+    .latestTrendHeading{
+        font-size: 1.3rem;
+    }
+    .latestCards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    ul {
+        display: inline-flex;
+        flex-direction: column;
+        li{
+            list-style: none;
+            cursor: pointer;
+            display: inline-block;
+
+        }
+    }
+}
+
+.latestCard{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    
+    .latestProductImage{
+        width: 100%;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+}

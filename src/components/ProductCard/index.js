@@ -3,17 +3,17 @@ import "./index.scss";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
 	const [isAddedToWishlist, setIsAddedToWishList] = useState(true);
+	const { title, image, price, rating } = product;
 
+	let MRP = Math.floor(price * 83);
+
+	let discontedPrice = Math.floor(MRP - (MRP * 30) / 100);
 	return (
 		<div className="productCard">
 			<div className="imageContainer">
-				<img
-					src="https://www.feltright.in/cdn/shop/files/WhatsAppImage2023-08-09at5.02.23PM_2.jpg?v=1691580853&width=1000"
-					alt="Product Name"
-					className="productImage"
-				/>
+				<img src={image} alt="Product Name" className="productImage" />
 				<button className="viewProductButton">View Product</button>
 				{/* Add to wishlist  */}
 				{isAddedToWishlist ? (
@@ -34,13 +34,16 @@ const ProductCard = () => {
 					</span>
 				)}
 			</div>
-			<p className="productName">Flop turn ruler</p>
+			<p className="productName">{title.slice(0, 20)}...</p>
 			<p>
-				<span className="productMRP">Rs.549</span>
-				<span className="sellingPrice">Rs.649</span>
+				<span className="productMRP">Rs.{MRP}</span>
+				<span className="sellingPrice">
+					Rs.
+					{discontedPrice}
+				</span>
 			</p>
 			<p className="rating">
-				★★★★★ <span>(210)</span>
+				★★★★★ <span>({rating.count})</span>
 			</p>
 		</div>
 	);

@@ -1,0 +1,24 @@
+.filterComponent{
+    width: 30%;
+    padding: 20px;
+    .heading{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .filterName{
+        font-size: 1.2rem;
+        padding: 10px 0px;
+    }
+
+    label{
+        margin: 0px 10px;
+    }
+    hr{
+        margin: 10px 0px;
+    }
+    .checkbox{
+        display: flex;
+        align-items: center;
+    }
+}

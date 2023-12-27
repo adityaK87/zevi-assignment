@@ -1,0 +1,23 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Poppins', sans-serif;
+}
+.homeElement {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	
+	.searchResults{
+		font-size: 2rem;
+		font-weight: 500;
+		padding: 20px;
+		align-self: flex-start;
+	}
+	.sectionContainer{
+		display: flex;
+		justify-content: center;
+	}
+}

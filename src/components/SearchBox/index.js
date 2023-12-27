@@ -1,8 +1,16 @@
 import React from "react";
 import "./index.scss";
 
-const SearchBox = () => {
-	return <input type="text" className="searchBox" placeholder="Search" />;
+const SearchBox = ({ setIsInsideSearch }) => {
+	return (
+		<input
+			type="text"
+			className="searchBox"
+			placeholder="Search"
+			onFocus={() => setIsInsideSearch(true)}
+			onBlur={() => setIsInsideSearch(false)}
+		/>
+	);
 };
 
 export default SearchBox;

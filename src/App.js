@@ -21,7 +21,6 @@ const App = () => {
 		getData(dispatch);
 	}, []);
 
-	console.log("state.products", state.productData);
 	return (
 		<section className="homeElement">
 			<SearchBox setIsInsideSearch={setIsInsideSearch} />

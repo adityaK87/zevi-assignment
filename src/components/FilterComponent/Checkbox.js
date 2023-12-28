@@ -4,7 +4,7 @@ import "./index.scss";
 const Checkbox = ({ name, id }) => {
 	return (
 		<div className="checkbox">
-			<input type="checkbox" name="under500" id={id} />
+			<input type="checkbox" name={name} id={id} />
 			<label htmlFor={id} className="">
 				{name}
 			</label>

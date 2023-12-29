@@ -16,6 +16,13 @@
     font-size: 1.5rem;
 }
 
+
+@mixin mediumScreen ($screenSize, $productCardWidth){
+    @media  only screen and (max-width:$screenSize){
+      width: $productCardWidth;
+    }
+}
+
 .productCard{
     display: flex;
     flex-direction: column;
@@ -23,6 +30,10 @@
     height: 100%;
     flex-wrap: wrap;
     margin: 10px;
+    @include mediumScreen(950px, 30% );
+    @include mediumScreen(600px, 40% );
+    @include mediumScreen(450px, 50% );
+    @include mediumScreen(375px, 60% );
 
     .imageContainer{
         position: relative;
